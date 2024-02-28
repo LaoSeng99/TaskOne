@@ -1,0 +1,116 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    display: block;
+}
+
+th {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+
+    th:first-child {
+        border-left: 1px solid #dddddd;
+    }
+
+div.dt-container .dt-paging .dt-paging-button {
+    border-radius: 50%;
+    color: #495057;
+    cursor: pointer;
+}
+
+    div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+        background-color: cornflowerblue;
+        color: #fff !important;
+        font-weight: 500;
+        border: 1px solid transparent
+    }
+
+    div.dt-container .dt-paging .dt-paging-button:hover:not(.dt-paging-button.current,.dt-paging-button.disabled) {
+        background: #79bef6;
+        opacity: 0.8;
+        border: 1px solid transparent
+    }
+
+.actions-column i {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.left-tab {
+    position:absolute;
+    padding-left: 64px;
+    padding-right: 0;
+    border-bottom: none;
+    height: 100%;
+   
+}
+#myTab {
+    min-height:100%
+}
+    #myTab .nav-link {
+        border-right: 1px solid #dee2e6;
+       
+    }
+    #myTab .nav-link:first-child {
+        height: 36px;
+        border-right: 1px solid #dee2e6;
+    }
+
+    #myTab .nav-link:last-child {
+        border-right: 1px solid #dee2e6;
+        flex: 1;
+    }
+    #myTab .nav-link.active {
+        color: black;
+        border-right: transparent;
+        border-left: #dee2e6 1px solid;
+        border-top: #dee2e6 1px solid;
+        border-bottom: #dee2e6 1px solid;
+        border-bottom-left-radius: 0.25rem;
+        border-top-right-radius: 0;
+    }
+
+.right-content {
+    padding-left: 18%;
+    padding-top: 48px
+}
+.treeview .list-group-item {
+    cursor: pointer
+}
+
+.treeview span.indent {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.treeview span.icon {
+    width: 12px;
+    margin-right: 5px
+}
+
+.treeview .node-disabled {
+    color: silver;
+    cursor: not-allowed
+}
+
+.node-treeview1 {
+}
+
+    .node-treeview1:not(.node-disabled):hover {
+        background-color: #F5F5F5;
+    }
+
+
+

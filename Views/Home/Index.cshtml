@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+<div class="alert alert-success align-items-center" role="alert"  style="display:none" >
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill" /></svg>
+    <div>
+    Login Success
+    </div>
+</div>
+<div class="alert alert-danger  align-items-center" role="alert" style="display:none">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill" /></svg>
+    <div>
+      Login Failed
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 left-tab">
+
+        <nav id="myTab" class="nav flex-column" role="tablist">
+            <div class="nav-link"> </div>
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+               aria-controls="home" aria-selected="true">Home</a>
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+               aria-controls="profile" aria-selected="false">Profile</a>
+            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab"
+               aria-controls="contact" aria-selected="false">Messages</a>
+            <a class="nav-link" id="setting-tab" data-bs-toggle="tab" href="#setting" role="tab"
+               aria-controls="contact" aria-selected="false">Settings</a>
+            <div class="nav-link"> </div>
+        </nav>
+
+    </div>
+    <div class=" right-content row">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div id="treeview1" class="treeview"></div>
+                    </div>
+                    <div class="col-md-9">
+                        <h3>Customer Details</h3>
+                        <table id="customerTable" class="table display cell-border ">
+                            <thead>
+                                <tr>
+                                    <th>  # </th>
+                                    <th>  Name </th>
+                                    <th>  Address  </th>
+                                    <th> Country</th>
+                                    <th> State  </th>
+                                    <th> City  </th>
+                                    <th> Pin Code </th>
+                                    <th> Actions </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <form>
+                    <h4>Login Profile</h4>
+                    <div class="mb-3">
+                        <label for="userId" class="form-label">UserID:</label>
+                        <input class="form-control login-input" id="userId" placeholder="UserID here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label "> Password</label>
+                        <input type="text" class="form-control login-input " id="password" aria-describedby="passwordFeedBack" placeholder="Pasword Here" >
+                        <div id="passwordFeedBack" class="invalid-feedback">
+                           Error UserID or password, try again.
+                        </div>
+                    </div>
+                
+                    <button disabled id="submitBtn" type="button" class="btn btn-primary " >Submit</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                Contact
+                content goes here...
+            </div>
+            <div class="tab-pane fade" id="setting" role="tabpanel" aria-labelledby="setting-tab">
+                Settings
+                content goes here...
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="customer-detail-form">
+                    <div class="mb-3">
+                        <label for="customer-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" id="customer-name" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-address" class="col-form-label">Address:</label>
+                        <input class="form-control" id="customer-address" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-country" class="col-form-label">Country:</label>
+                        <input class="form-control" id="customer-country" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-state" class="col-form-label">State:</label>
+                        <input class="form-control" id="customer-state" readonly>
+                        <div class="mb-3">
+                            <label for="customer-city" class="col-form-label">City:</label>
+                            <input class="form-control" id="customer-city" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="customer-pinCode" class="col-form-label">Pin Code:</label>
+                            <input class="form-control" id="customer-pinCode" readonly>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
